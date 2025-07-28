@@ -5,7 +5,7 @@ Ensures compliance with STIG WN10-AC-000005 by configuring the Account Lockout D
 .DESCRIPTION
 This PowerShell script sets the Account Lockout Duration to a minimum of 15 minutes to comply with DoD security requirements defined in the STIG.
 It uses the 'net accounts' command to apply the setting locally and verifies the result after execution.
-#>
+
 
 .NOTES
     Author          : Cyril Thomas
