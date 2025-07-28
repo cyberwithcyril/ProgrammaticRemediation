@@ -5,7 +5,7 @@ Ensures compliance with STIG WN10-CC-000185 by configuring Windows 10 to prevent
 .DESCRIPTION
 This PowerShell script disables the default autorun behavior by setting registry values that block autorun commands from executing on all drive types.
 This is in accordance with the Department of Defense STIG requirement WN10-CC-000185, which mitigates the risk of malware propagation via removable media.
-#>
+
 
 .NOTES
     Author          : Cyril Thomas
