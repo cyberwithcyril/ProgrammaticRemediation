@@ -37,7 +37,6 @@ After execution, the script verifies and reports the applied configuration to en
     Put any usage instructions here.
     Example syntax:
     PS C:\> .\__remediation_template(WN10-CC-000020).ps1 
-#>
 
 
 # Set IPv6 source routing to 'Highest Protection' (completely disabled)
