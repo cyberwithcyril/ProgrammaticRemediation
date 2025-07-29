@@ -38,6 +38,7 @@ After execution, the script verifies and reports the applied configuration to en
     Example syntax:
     PS C:\> .\__remediation_template(WN10-CC-000020).ps1 
 
+#>
 
 # Set IPv6 source routing to 'Highest Protection' (completely disabled)
 $regPath = "HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters"
