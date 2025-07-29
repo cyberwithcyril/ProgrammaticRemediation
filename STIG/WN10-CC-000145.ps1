@@ -30,13 +30,6 @@ It modifies the appropriate power policy setting to meet the DoD security requir
 
 #>
 
-.SYNOPSIS
-Ensures compliance with STIG WN10-CC-000145 by enabling password prompt on wake from sleep while on battery.
-
-.DESCRIPTION
-Uses powercfg.exe to set the 'Require a password on wakeup' setting to 'Yes' (value: 1) for battery mode.
-#>
-
 # Paths and values
 $registryPath = "HKLM:\SOFTWARE\Policies\Microsoft\Power\PowerSettings\0e796bdb-100d-47d6-a2d5-f7d2daa51f51"
 $valuesToSet = @{
