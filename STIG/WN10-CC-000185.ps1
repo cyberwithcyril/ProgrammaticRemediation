@@ -28,7 +28,7 @@ This is in accordance with the Department of Defense STIG requirement WN10-CC-00
     Put any usage instructions here.
     Example syntax:
     PS C:\> .\__remediation_template(STIG-ID-WN10-CC-000185).ps1 
-
+#>
 
 # Registry path for disabling Autorun
 $regPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer"
