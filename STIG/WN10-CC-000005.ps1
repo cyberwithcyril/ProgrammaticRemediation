@@ -13,7 +13,7 @@ Allowing camera access from the lock screen poses a security risk by enabling po
 - **Value:** 1 (Disable camera access from lock screen)
 
 Setting this value to `1` ensures compliance by preventing camera access prior to user authentication.
-#>
+
 
 .NOTES
     Author          : Cyril Thomas
