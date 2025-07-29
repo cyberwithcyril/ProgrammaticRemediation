@@ -39,7 +39,7 @@ After execution, the script confirms the configuration values have been applied.
     Example syntax:
     PS C:\> .\__remediation_template(WN10-CC-000030).ps1 
 
-
+#>
 
 # This script disables ICMP redirects for all network interfaces
 # Requires Administrator privileges
