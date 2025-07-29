@@ -28,7 +28,8 @@ It modifies the appropriate power policy setting to meet the DoD security requir
     Example syntax:
     PS C:\> .\__remediation_template(STIG-ID-WN10-CC-000145).ps1 
 
-<#
+#>
+
 .SYNOPSIS
 Ensures compliance with STIG WN10-CC-000145 by enabling password prompt on wake from sleep while on battery.
 
