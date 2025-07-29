@@ -27,7 +27,6 @@ It modifies the appropriate power policy setting to meet the DoD security requir
     Put any usage instructions here.
     Example syntax:
     PS C:\> .\__remediation_template(STIG-ID-WN10-CC-000145).ps1 
-#>
 
 <#
 .SYNOPSIS
