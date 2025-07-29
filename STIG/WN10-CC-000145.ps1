@@ -28,7 +28,7 @@ It modifies the appropriate power policy setting to meet the DoD security requir
     Example syntax:
     PS C:\> .\__remediation_template(STIG-ID-WN10-CC-000145).ps1 
 
-
+#>
 
 # Paths and values
 $registryPath = "HKLM:\SOFTWARE\Policies\Microsoft\Power\PowerSettings\0e796bdb-100d-47d6-a2d5-f7d2daa51f51"
