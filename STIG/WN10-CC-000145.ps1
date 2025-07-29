@@ -5,7 +5,7 @@ Ensures compliance with STIG WN10-CC-000145 by requiring a password prompt on re
 .DESCRIPTION
 This PowerShell script configures the Windows 10 system to prompt for a password when resuming from sleep on battery.
 It modifies the appropriate power policy setting to meet the DoD security requirement defined in STIG WN10-CC-000145, helping to prevent unauthorized access when a system is unattended.
-#>
+
 .NOTES
     Author          : Cyril Thomas
     LinkedIn        : linkedin.com/in/cyrilkthomas/
