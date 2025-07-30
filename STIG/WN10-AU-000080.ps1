@@ -46,7 +46,17 @@ if (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     exit 1
 }
 
-# Configure audit policy for Special Logon successes
+# Configure Special Logon success auditing using exact name
+Write-Host "Configuring Special Logon success auditing..." -ForegroundColor Yellow
 auditpol /set /subcategory:"Special Logon" /success:enable
 
-Write-Host "WN10-AU-000080 remediated - Special Logon success auditing enabled" -ForegroundColor Green
+# Verify the setting
+$result = auditpol /get /subcategory:"Special Logon" | Out-String
+Write-Host "Current setting:" -ForegroundColor Cyan
+Write-Host $result.Trim()
+
+if ($result -match "Success") {
+    Write-Host "WN10-AU-000080 remediated - Special Logon success auditing enabled" -ForegroundColor Green
+} else {
+    Write-Host "Setting may not have applied correctly. Try running 'gpupdate /force'" -ForegroundColor Yellow
+}
