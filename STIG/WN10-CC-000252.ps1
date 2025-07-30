@@ -29,6 +29,7 @@ This aligns the system with the Department of Defense STIG requirement WN10-CC-0
     Example syntax:
     PS C:\> .\__remediation_template(WN10-CC-000252).ps1 
 
+#>
 
 # WN10-CC-000252 Remediation Script
 # Windows 10 must be configured to disable Windows Game Recording and Broadcasting
