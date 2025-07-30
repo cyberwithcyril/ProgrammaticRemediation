@@ -29,7 +29,7 @@ This hardens the system in line with Department of Defense STIG security guidanc
     Example syntax:
     PS C:\> .\__remediation_template(STIG-ID-WN10-SO-000150).ps1 
 
-
+#>
 
 # WN10-SO-000150 Remediation Script
 # Anonymous enumeration of shares must be restricted
