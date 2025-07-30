@@ -28,6 +28,8 @@ This script creates a temporary security template, applies it via secedit, and r
     PS C:\> .\__remediation_template(STIG-ID-WN10-UR-000030 ).ps1 
     
 ___
+#>
+
 # WN10-UR-000030 Remediation Script
 # The Back up files and directories user right must only be assigned to the Administrators group
 
