@@ -42,10 +42,25 @@ if (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     exit 1
 }
 
-# Enable Windows Defender SmartScreen for Explorer
-$path = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\System"
-if (!(Test-Path $path)) { New-Item -Path $path -Force | Out-Null }
+Write-Host "Enabling Windows Defender SmartScreen for Explorer..." -ForegroundColor Yellow
 
-Set-ItemProperty -Path $path -Name "EnableSmartScreen" -Value 1 -Type DWord
+# Method 1: Enable SmartScreen via System policy
+$path1 = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\System"
+if (!(Test-Path $path1)) { New-Item -Path $path1 -Force | Out-Null }
+Set-ItemProperty -Path $path1 -Name "EnableSmartScreen" -Value 1 -Type DWord
+
+# Method 2: Configure SmartScreen behavior
+$path2 = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\System"
+Set-ItemProperty -Path $path2 -Name "ShellSmartScreenLevel" -Value "Block" -Type String
+
+# Method 3: Enable SmartScreen for File Explorer
+$path3 = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer"
+Set-ItemProperty -Path $path3 -Name "SmartScreenEnabled" -Value "RequireAdmin" -Type String
+
+# Method 4: Configure Windows Defender SmartScreen
+$path4 = "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\SmartScreen"
+if (!(Test-Path $path4)) { New-Item -Path $path4 -Force | Out-Null }
+Set-ItemProperty -Path $path4 -Name "ConfigureAppInstallControlEnabled" -Value 1 -Type DWord
+Set-ItemProperty -Path $path4 -Name "ConfigureAppInstallControl" -Value "Anywhere" -Type String
 
 Write-Host "WN10-CC-000210 remediated - Windows Defender SmartScreen for Explorer enabled" -ForegroundColor Green
